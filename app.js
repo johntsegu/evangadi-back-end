@@ -19,9 +19,11 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
-      "https://grouponeevangadiforumproject.netlify.app",
+      // "http://localhost:5173", // local dev
+
+      "https://evangadi-forum.jonitsegu.com", // your live frontend
     ],
+    credentials: true, // allow cookies or auth headers if needed
   })
 );
 
